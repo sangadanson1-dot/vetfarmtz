@@ -1,0 +1,284 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+:root {
+  --primary: #1a5d1a;     /* Kijani cha Tanzania */
+  --primary-dark: #0d3b0d;
+  --secondary: #e63946;   /* Jekundu ya Tanzania */
+  --light: #f8f9fa;
+  --dark: #2b2d42;
+  --gray: #6c757d;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: #fff;
+}
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* Header */
+.header {
+  background: white;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+}
+.logo {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.logo span { color: var(--secondary); }
+.nav {
+  display: flex;
+  gap: 1.2rem;
+}
+.nav a {
+  font-weight: 500;
+  padding: 0.3rem 0;
+  border-bottom: 2px solid transparent;
+}
+.nav a:hover, .nav a.active {
+  color: var(--primary);
+  border-bottom: 2px solid var(--primary);
+}
+.hamburger {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+/* Hero */
+.hero {
+  background: linear-gradient(rgba(26, 93, 26, 0.85), rgba(13, 59, 13, 0.9)), url('https://images.pexels.com/photos/1109561/pexels-photo-1109561.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750') center/cover no-repeat;
+  color: white;
+  padding: 160px 0 100px;
+  text-align: center;
+}
+.hero h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+.subtitle {
+  font-size: 1.3rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem;
+  opacity: 0.95;
+}
+.contact-badges {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+.contact-badges span {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(255,255,255,0.15);
+  padding: 0.5rem 1.2rem;
+  border-radius: 30px;
+  font-size: 0.95rem;
+}
+.btn {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  border-radius: 50px;
+  font-weight: 600;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn.primary {
+  background: var(--secondary);
+  color: white;
+}
+.btn.primary:hover {
+  background: #c1121f;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+/* Services */
+.services {
+  padding: 80px 0;
+  background-color: var(--light);
+}
+.services h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+}
+.card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s;
+}
+.card:hover {
+  transform: translateY(-8px);
+}
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+.card h3 {
+  padding: 1.2rem 1.2rem 0.5rem;
+  font-size: 1.3rem;
+  color: var(--primary-dark);
+}
+.card p {
+  padding: 0 1.2rem 1.2rem;
+  color: var(--gray);
+  font-size: 0.95rem;
+}
+
+/* PDF Section */
+.pdf-section {
+  padding: 70px 0;
+  background: #f0f9f4;
+}
+.pdf-section h2 {
+  text-align: center;
+  color: var(--primary);
+  margin-bottom: 1rem;
+}
+.pdf-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.5rem;
+  color: var(--gray);
+}
+.pdf-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.pdf-card {
+  background: white;
+  padding: 1.8rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+.pdf-card i {
+  font-size: 3rem;
+  color: var(--secondary);
+  margin-bottom: 1rem;
+}
+.pdf-card h3 {
+  color: var(--primary-dark);
+  margin-bottom: 0.8rem;
+}
+.note {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: var(--gray);
+}
+
+/* Contact */
+.contact {
+  padding: 80px 0;
+}
+.contact h2 {
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 3rem;
+  color: var(--primary);
+}
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+.contact-info h3 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--primary-dark);
+}
+.contact-info p {
+  margin: 0.8rem 0;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.contact-info a {
+  color: var(--secondary);
+  font-weight: 500;
+}
+.contact-info a:hover {
+  text-decoration: underline;
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  margin-bottom: 1rem;
+  border: 1px solid #dee2e6;
+  border-radius: 8px;
+  font-family: inherit;
+}
+.contact-form button {
+  width: 100%;
+}
+
+/* Footer */
+.footer {
+  background: var(--dark);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+.footer p {
+  opacity: 0.9;
+}
+.footer small a {
+  color: #4cc9f0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav { display: none; }
+  .nav.active {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: white;
+    padding: 1rem 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .hamburger { display: block; }
+  .hero h1 { font-size: 2rem; }
+  .contact-grid { grid-template-columns: 1fr; }
+  .contact-badges { flex-direction: column; gap: 0.8rem; }
+  }
